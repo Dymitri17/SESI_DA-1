@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login com Miniaturas</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .principal {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* LADO ESQUERDO (Foto do Pug) */
+    .l-esq {
+        background-image: url("./pug.png"); /* Certifique-se de que a imagem existe */
+        background-position: center;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 80px;
+        box-sizing: border-box;
+    }
+
+    .l-esq h1 {
+        color: black;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* LADO DIREITO (Área de Login) */
+    .l-dir {
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    /* Título principal da direita */
+    .titulo-direito {
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-align: center;
+        max-width: 500px;
+        margin-bottom: 50px;
+        color: #000000;
+        line-height: 1.2;
+    }
+
+    /* Container para alinhar o texto e as miniaturas */
+    .container-botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espaço entre os botões */
+    }
+
+    /* Estilo do botão de opção */
+    .btn-opcao {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Espaço entre a miniatura e o texto */
+        width: 340px;
+        height: 50px; /* Um pouco mais alto para acomodar a miniatura */
+        background-color: white;
+        border: 1px solid #000000;
+        border-radius: 25px; /* Formato de pílula */
+        padding: 0 15px; /* Espaço interno nas laterais */
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #000;
+    }
+
+    /* O SEGREDO: Estilo da Miniatura Arredondada */
+    .miniatura-logo {
+        width: 25px;   /* Largura da miniatura */
+        height: 25px;  /* Altura da miniatura (deve ser igual à largura) */
+        border-radius: 50%; /* TORNA A IMAGEM REDONDA */
+        border: 1px solid #ddd; /* Borda fininha opcional, igual à referência */
+        object-fit: cover; /* Garante que a imagem não distorça */
+    }
+
+    /* Texto pequeno de ajuda */
+    .texto-ajuda {
+        font-size: 0.8rem;
+        color: #555555;
+        margin-top: 15px;
+        margin-bottom: 60px;
+    }
+
+    .texto-ajuda a {
+        color: #3b82f6;
+        text-decoration: none;
+    }
+
+    /* Botão preto grande "Vamos lá" */
+    .btn-vamos {
+        width: 340px;
+        height: 50px;
+        background-color: #1e1e1e;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-top: auto; /* Empurra o botão para o final da div flex */
+    }
+</style>
+
+<body>
+    <div class="principal">
+        
+        <div class="l-esq">
+            <h1>Bem-Vindo</h1>
+        </div>
+        
+        <div class="l-dir">
+            
+            <h1 class="titulo-direito">Encontre tudo o que você precisa para seu animal de estimação</h1>
+            
+            <div class="container-botoes">
+                
+                <button class="btn-opcao">
+                    <img src="./google.png" alt="Google Logo" class="miniatura-logo">
+                    <span>Entrar com Google</span>
+                </button>
+                
+                <button class="btn-opcao">
+                    <img src="./apple.png" alt="Apple Logo" class="miniatura-logo">
+                    <span>Entrar com Apple</span>
+                </button>
+                
+                <button class="btn-opcao">
+                    <img src="./email.png" alt="E-mail Icon" class="miniatura-logo">
+                    <span>Entrar com E-mail</span>
+                </button>
+            </div>
+            
+            <p class="texto-ajuda">Você quer tentar de outra maneira? <a href="#">Saber mais</a></p>
+            
+            <button class="btn-vamos">Vamos lá</button>
+            
+        </div>
+
+    </div>
+</body>
+
+</html>
